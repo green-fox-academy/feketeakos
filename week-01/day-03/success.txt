@@ -1,2 +1,4 @@
 Is it a success?
 Oh, yeeeah!
+
+Now I add a new line, it will be version 4
