@@ -18,8 +18,10 @@ let greyRGBs: string[] = ['rgb(220,220,220)', 'rgb(211,211,211)', 'rgb(192,192,1
 function littleStar(x: number, y: number, size: number) {
     ctx.fillStyle = greyRGBs[Math.floor(Math.random() * 7)];
     ctx.fillRect(x, y, size, size)
-   // ctx.rotate(Math.PI / 45)
+    ctx.rotate(Math.PI / 45) 
 }
+
 for (let i: number = 0; i < 1000; i++) {
     littleStar(Math.random() * canvas.width, Math.random() * canvas.height, 5);
+    
 }
