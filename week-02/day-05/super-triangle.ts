@@ -5,7 +5,7 @@ const ctx = canvas.getContext('2d');
 
 let xstartingPoint: number = canvas.width - canvas.width;
 let ystartingPoint: number = canvas.height;
-let lineLength: number = 20;
+let lineLength: number = canvas.width/20;
 let triangleHeight: number = (((3 ** (0.5)) / 2) * lineLength);
 
 function triangle(xstartingPoint: number, ystartingPoint: number) {
