@@ -17,28 +17,31 @@ function triangle(xstartingPoint: number, ystartingPoint: number) {
     ctx.lineTo(xstartingPoint, ystartingPoint);
     ctx.stroke();
 }
-for(let j: number = 21; j>1; j--) {
-    
+for (let j: number = 21; j > 1; j--) {
 
-    for (let k: number = 0; k <= j-2; k+= 1) {
+
+    for (let k: number = 0; k <= j - 2; k += 1) {
         triangle(xstartingPoint + k * lineLength, ystartingPoint)
     }
 
-    xstartingPoint = xstartingPoint + lineLength/2;
+    xstartingPoint = xstartingPoint + lineLength / 2;
     ystartingPoint = ystartingPoint - triangleHeight;
 
 
 }
-    /*for (let n: number = 0; n <= 21; n += 1) {
+
+
+/*
+    for (let n: number = 0; n <= 21; n += 1) {
         triangle(xstartingPoint + n * lineLength / 2, ystartingPoint - k * triangleHeight)
         triangle(xstartingPoint + n * lineLength, ystartingPoint)
-        
-    
-    //triangle(xstartingPoint + n * lineLength, ystartingPoint+n*triangleHeight);
-    //triangle(xstartingPoint + n * lineLength/2, ystartingPoint-n*triangleHeight);
 
-}}   
-/*
+
+    triangle(xstartingPoint + n * lineLength, ystartingPoint+n*triangleHeight);
+    triangle(xstartingPoint + n * lineLength/2, ystartingPoint-n*triangleHeight);
+
+}}
+
 function upsideTriangle(xstartingPoint: number, ystartingPoint: number) {
     ctx.beginPath();
     ctx.strokeStyle = 'black';
@@ -50,7 +53,7 @@ function upsideTriangle(xstartingPoint: number, ystartingPoint: number) {
 }
 
 
-/*for (let k: number = 0; k <= 21; k += 1) {
+for (let k: number = 0; k <= 21; k += 1) {
     triangle(xstartingPoint + k * lineLength / 2, ystartingPoint - k * triangleHeight);
     upsideTriangle(xstartingPoint + k * lineLength * 0.5, ystartingPoint - k * triangleHeight)
 
