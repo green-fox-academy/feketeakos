@@ -1,0 +1,6 @@
+cat
+dog
+rabbit
+hedgehog
+parrot
+lama
