@@ -3,8 +3,31 @@ const fs = require('fs')
 export = {};
 declare function require(path: string): any;
 
-let ipAddresses: string[] = [];
+function readLogFile(filename: string): string {
+    try {
+        fs.readLogFileSync(filename, 'utf-8');
+    } catch (error) {
+        return 'error!';
+    }
+}
+let fileContent: string = readLogFile('log.txt');
 
-let fileContent = fs.readFileSync('log.txt', 'utf-8');
+function createLinesBasedOnTextContent(fileContent: string){
+return fileContent.split('\n');
+}
+function getIPAddressOfLine(line: string): string {
+    return line.split('    ')[1];
+}
+let IPAddresses: string[] = createLinesBasedOnTextContent(fileContent)
+.map(function(line) {
+    return getIPAddressOfLine(line)
+})
 
-console.log(fileContent);
+let uniqueIPAddresses: string[] = [];
+
+uniqueIPAddresses = IPAddresses.map(function(IPAddress: string) {
+    if (!uniqueIPAddresses.includes(IPAddress)) {
+        return IPAddress;
+    }
+})
+console.log(uniqueIPAddresses);
