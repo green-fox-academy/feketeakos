@@ -1,7 +1,13 @@
 'use strict';
 
-class Plant{
+class Plant {
+    color: string;
+    waterAmount: number;
 
+    constructor(color: string, waterAmount: number) {
+        this.color = color;
+        this.waterAmount = waterAmount;
+    }
 }
 
-export default Plant
+export default Plant;
