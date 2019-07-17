@@ -1,0 +1,5 @@
+1 - Do the washing up
+2 - buy meat
+3 - buy milk
+4 - feed the dog
+5 - feed the hedgehog
