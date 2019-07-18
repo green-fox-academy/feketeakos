@@ -47,4 +47,6 @@ week-03/day-02/node_modules/@types/node/v8.d.ts
 week-03/day-02/node_modules/@types/node/vm.d.ts
 week-03/day-02/node_modules/@types/node/worker_threads.d.ts
 week-03/day-02/node_modules/@types/node/zlib.d.ts
+week-03/day-02/node_modules
+TODO-app/node_modules
 week-03/day-02/package-lock.json
