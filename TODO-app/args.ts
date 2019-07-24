@@ -47,7 +47,7 @@ if (argList.length === 2) {
 
     //remove task:
 } else if (argList[2] === '-r' && lines.length >= 2) {
-    let splicePos: number = parseInt(argList[3])
-    lines.splice(splicePos-1,1);
+    let splicePos: number = parseInt(argList[3]);
+    lines.splice(splicePos-1,1)
     fs.writeFileSync('list.txt', lines);
-} 
+}
