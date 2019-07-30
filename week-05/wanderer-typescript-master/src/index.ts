@@ -86,12 +86,13 @@ function onKeyPress(event: any) {
         case 39:
             if (nextIsWall() === false) {
                console.log(nextIsWall())
-               console.log(hero.XPos, hero.YPos)
-                drawMap()
+               console.log(hero.XPos, hero.YPos);
+               drawMap()
                 if (hero.XPos > 8) {
                     hero.moveHeroR(hero.XPos, hero.YPos)
                 } else {
                     hero.XPos = hero.XPos + 1
+                    hero.YPos === hero.YPos
                     hero.moveHeroR(hero.XPos, hero.YPos)
                 }
             }
