@@ -14,4 +14,4 @@ const rotateMatrix = matrix => (
     ))
 );
 
-console.log(rotateMatrix(matrix.reverse()))
+console.table(rotateMatrix(matrix.reverse()))
