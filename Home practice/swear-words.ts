@@ -8,5 +8,5 @@ let fileContent = fs.readFileSync('swear-words.txt', 'utf-8');
 let wordArray: string[] = fileContent.toLowerCase().split(' ');
 
 let result = wordArray.filter(f => wordsToSearch.includes(f));
-console.log(result);
+console.table(result);
 console.log(result.length);
