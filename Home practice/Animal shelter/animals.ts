@@ -2,11 +2,12 @@
 
 export default class Animals {
     name: string;
-    ownerName: string;
     isHealthy: boolean;
     healCost: number;
+    ownerName: string;
 
-    constructor(name: string, isHealthy: boolean, healCost: number, ownerName?: string, ) {
+
+    constructor(name: string, isHealthy: boolean, healCost: number, ownerName: string) {
         this.name = name;
         this.isHealthy = isHealthy;
         this.healCost = healCost;
@@ -29,5 +30,3 @@ export default class Animals {
         }
     }
 }
-let cat: Animals = new Animals('Mici', false, Math.floor(Math.random() * (6 - 1) ) + 1, 'Feribá');
-console.log(cat.toString())
