@@ -50,3 +50,5 @@ week-03/day-02/node_modules/@types/node/zlib.d.ts
 week-03/day-02/node_modules
 TODO-app/node_modules
 week-03/day-02/package-lock.json
+/node_modules
+node_modules/
