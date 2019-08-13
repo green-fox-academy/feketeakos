@@ -2,10 +2,13 @@
 import Animals from './animals';
 
 export default class Cat extends Animals {
-    
-    constructor(name: string, isHealthy: boolean, ownerName?: string) {
-        super(name, isHealthy, Math.floor(Math.random() * (6 - 0)) + 0, ownerName)
+
+    constructor(isHealthy: boolean, ownerName: string, name: string = 'cat') {
+        super(isHealthy, Math.floor(Math.random() * (6 - 0)) + 0, ownerName, name);
     }
 }
-let cat: Cat = new Cat('Mici', false);
-console.log(cat.toString());
+let cat: Cat = new Cat(false, 'béla')
+console.log(cat.isHealthy);
+console.log(cat.healCost);
+console.log(cat.ownerName);
+console.log(cat.name);

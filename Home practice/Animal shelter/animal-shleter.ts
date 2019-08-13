@@ -1,23 +1,60 @@
 'use strict';
 import Animals from './animals'
-import Cat from './cat'
 
 class AnimalShelter {
     budget: number;
     animals: Animals[];
+    // adopters: string[];
+    owners: string[];
 
-    constructor(budget: number = 50, animals: Animals[]) {
-        this.budget = budget;
-        this.animals = animals;
+    constructor() {
+        this.budget = 50;
+        this.animals = [];
+        this.owners = [];
     }
-    rescue(animals: Animals): number {
-        this.animals.push(animals);
-        return this.animals.length
+    rescue(name: Animals): number {
+        this.animals.push(name);
+        return this.animals.length;
     }
-    heal() {
+    heal(): number {
+        for (let i: number = 0; i < this.animals.length; i++) {
+            if (this.animals[i].isHealthy === false && this.animals[i].healCost < this.budget) {
+                this.animals[i].isHealthy = true;
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+    }
 
+    addAdopter(name: string): void {
+        this.owners.push(name);
+    }
+
+    findNewOwner(): void {
+        let animalRandom: number = Math.floor(Math.random() * this.animals.length + 1);
+        let ownersRandom: number = Math.floor(Math.random() * this.owners.length + 1);
+        if (this.animals[animalRandom].isAdoptable()) {
+            this.animals[animalRandom].ownerName = this.owners[ownersRandom];
+            this.animals.splice(animalRandom, 1);
+            this.owners.splice(ownersRandom, 1);
+        }
+    }
+
+    earnDonation(amount: number): number {
+        this.budget += amount;
+        return this.budget;
+    }
+
+    toString(): void {
+        console.log(`Budget: ${this.budget} \n There are ${this.animals.length} animals and ${this.owners.length} potentional adopters.\n`
+            + this.animals[i].toString())
     }
 }
 
-let illatosut: AnimalShelter = new AnimalShelter(50, []);
-console.log(illatosut.rescue());
+
+let illatosut: AnimalShelter = new AnimalShelter();
+
+illatosut.addAdopter('Béla');
+illatosut.earnDonation(40);
+illatosut.rescue(name)
