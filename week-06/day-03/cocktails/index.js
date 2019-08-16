@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3002;
+const PORT = 3000;
 const cocktails = [
     { name: 'GIN FIZZ', price: 1520, contains: ['gin', 'sugar', 'lemon juice', 'soda'], isAlcoholic: true },
     { name: 'BLOODY MARY', price: 1650, contains: ['vodka', 'tomato juice', 'spices'], isAlcoholic: true },
@@ -11,33 +11,37 @@ const cocktails = [
     { name: 'VIRGIN MOJITO', price: 990, contains: ['sugar', 'lime juice', 'soda water'], isAlcoholic: false },
     { name: 'SAFE SEX ON THE BEACH', price: 990, contains: ['peach schnapps', 'orange juice', 'cranberry juice'], isAlcoholic: false },
 ];
-cocktails[0].contains[0]
-const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
 
-app.use('/static', express.static('static'));
+app.use(express.static('static'));
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-function alcoholFilter(alkohol) {
+function alcoholFilter(alcoholType) {
     let filtered = []
-    for (let i = 0; i < cocktails.length; i++) {
-        for (let j = 0; j < cocktails[i].contains.length; j++) {
-            if (cocktails[i].contains[j] === alkohol) {
-                filtered.push(alkohol)
+    if (!alcoholType) {
+        return cocktails
+    } else {
+        for (let i = 0; i < cocktails.length; i++) {
+            for (let j = 0; j < cocktails[i].contains.length; j++) {
+                if (cocktails[i].contains[j] === alcoholType) {
+                    filtered.push(cocktails[i])
+                }
             }
         }
+        return filtered
     }
-} return filtered
+}
 
+let alcoholList = ['gin', 'vodka', 'rum', 'tequila']
 // home page
 app.get('/', (req, res) => {
     // render `home.ejs`
-    res.render('home', {
-        todo: todos
-    });
-});
+    let filteredAdfgcvbnvgf
+    res.render('home', { alcoholList: alcoholList,
+                        cocktails: alcoholFilter(req.query.alcoholType) })
+})
+    ;
 
-// start express app on port 3000
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
