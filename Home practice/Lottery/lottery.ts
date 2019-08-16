@@ -4,13 +4,12 @@ const fs = require('fs');
 let fileContent = fs.readFileSync('lottery.txt', 'utf-8');
 let split: string[] = fileContent.split('\r\n')
 let numbers: string[] = []
-
+/* 
 let filteredArr = []
 for (let i: number = 0; i < split.length; i++) {
     filteredArr.push(split[i].split(';'));
-    /* filteredArr.slice(-5,filteredArr.length) */
-}
-let lotteryNumbers: string [] = []
+} */
+/* let lotteryNumbers: string [] = []
 for (let i: number = 0; i < split.length; i++) {
     lotteryNumbers.push(filteredArr[i].slice(-5, filteredArr.length));
 }
@@ -29,12 +28,14 @@ for (let i = 0; i < 5; i++) {
  let maxCount: number = 0;
  let lotteryNumberForMaxCount: number = null;
  count.forEach((count, lotteryNumber) => {
-   if (count > maxCount /* && fiveMostCommon[lotteryNumber] === undefined */) {
+   if (count > maxCount && fiveMostCommon[lotteryNumber] === undefined) {
      maxCount = count;
      lotteryNumberForMaxCount = lotteryNumber;
    }
  });
  fiveMostCommon[lotteryNumberForMaxCount] = maxCount;
  count.delete(lotteryNumberForMaxCount);
-}
-console.log(fiveMostCommon);
+} */
+let search = fileContent.search('..;..;..;..;..;')
+
+console.log(search)
