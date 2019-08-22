@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: EventListeners</title>
+</head>
+
+<body>
+    <ul>
+        <li>apple</li>
+        <li>balloon</li>
+        <li>cat</li>
+        <li>dolphin</li>
+    </ul>
+    <button>How many items are in the list?</button>
+    <p class="result"></p>
+    <script>
+        'use strict';
+        const button = document.querySelector('button');
+        const getResult = () => {
+            let result2 = document.getElementsByTagName('li')
+            document.getElementsByClassName('result')[0].innerHTML = result2.length;
+        };
+        button.addEventListener('click', getResult);
+    </script>
+</body>
+
+</html>
