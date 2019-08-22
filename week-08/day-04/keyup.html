@@ -9,8 +9,12 @@
 <body>
     <h1>No last pressed key</h1>
     <script>
-      let element = document.getElementsByTagName('h1');
-      
+        let element = document.getElementsByTagName('h1')[0];
+        document.addEventListener('keypress', logKey);
+        function logKey(e) {
+            element.textContent = `Last pressed key: ${e.keyCode}`;
+        }
+
     </script>
     <!-- You can work in the html or in a separate js file. Like:
     <script>
