@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: EventListeners</title>
+  </head>
+  <body>
+    <button>Show me the date!</button>
+    <li></li>
+    <script>
+        'use strict';
+        const button = document.querySelector('button');
+        const date = new Date().toLocaleDateString("hu-HU")
+        const time = new Date().toLocaleTimeString("hu-HU");
+        const getDate = () => {
+            document.getElementsByTagName('li')[0].innerHTML = `Today's date: ${date} and time is: ${time}`;
+        };
+        button.addEventListener('click', getDate, {once: true});
+      ;
+    </script>
+
+    <!-- You can work in the html or in a separate js file. Like:
+    <script>
+      Create an event listener which logs the current timestamp to the console once the button is clicked.
+      When the button is clicked for the second or any other times no event listener should be called.
+      Try to solve this two different ways.
+      hint: take a look at the button attributes https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
+    </script>
+    OR
+    <script src="one-time-clicker.js"></script> -->
+  </body>
+</html>
