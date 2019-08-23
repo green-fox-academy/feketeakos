@@ -1,6 +1,10 @@
     body {
-        margin: 0;
-        background-color: grey;
+        background-color: #EBEBEB;
+    }
+
+    .container {
+        margin: auto;
+        background-color: white;
         font-family: "Trebuchet MS", Helvetica, sans-serif;
         display: flex;
         flex-direction: column;
@@ -8,35 +12,57 @@
         justify-content: center;
         align-items: center;
         align-content: stretch;
+        width: 500px;
+        height: 300px;
     }
 
     label {
         font-family: "Trebuchet MS", Helvetica, sans-serif;
-        font-size: medium;
+        font-size: 11px;
+        margin-bottom: 10px;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         align-content: center;
     }
 
     h1 {
         font-size: large;
         font-family: "Trebuchet MS", Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+    }
+
+    h6 {
+        margin: 0px;
+        font-size: 9px;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        align-content: flex-start;
     }
 
     input {
-        width: 100px;
+        width: 150px;
         height: 15px;
         padding: 5px;
         border: 3px;
+        margin-bottom: 10px;
         border-style: solid;
         border-color: grey;
     }
 
     input:focus {
-        width: 100px;
+        width: 150px;
         height: 15px;
         padding: 5px;
         border: 3px;
@@ -45,12 +71,17 @@
     }
 
     #button {
+        margin-top: 1cm;
+        width: 100px;
         height: 30px;
+        border: 0 px;
         border-radius: 25px;
+        background-color: black;
+        color: white;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         align-content: center;
     }

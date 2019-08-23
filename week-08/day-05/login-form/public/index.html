@@ -8,15 +8,32 @@
 </head>
 
 <body>
-  <h1>ACCOUNT LOGIN</h1>
-  <form action="/send" method="POST">
-    <label for="username">USERNAME</label>
-    <input type="text" id="username" name="username" autofocus required />
-    <label for="password">PASSWORD</label>
-    <input type="password" id="password" required />
-    <input type="button" id="button" value="Login" />
-  </form>
-  <script src="./main.js"></script>
+  <div class="container">
+    <h1>ACCOUNT LOGIN</h1>
+    <form action="/send" method="POST">
+      <label for="username">USERNAME</label>
+      <input type="text" id="username" name="username" placeholder="username" autofocus required />
+      <label for="password">PASSWORD</label> <img src="password.svg">
+      <input type="password" onmousedown="this.type='text'" onmouseup="this.type='password'"
+        onmousemove="this.type='password'" id="password" placeholder="password" required />
+      <h6>Forgot password?</h6>
+      <input type="button" id="button" value="Login" />
+      <script>
+      let loginButton = document.getElementById('button');
+      let forgotButton = document.getElementsByTagName('h6');
+        function loginPressed() {
+          console.log('You have pressed the login button.');
+        }
+        loginButton.addEventListener('click', loginPressed)
+
+        function forgotPressed() {
+          console.log(`Isn't it your birthday date?`)
+        }
+        forgotButton.addEventListener('click', forgotButton);
+
+      </script>
+    </form>
+  </div>
 </body>
 
 </html>
