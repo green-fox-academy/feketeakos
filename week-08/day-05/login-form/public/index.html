@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <form action="/send" method="POST">
+    <label for="username">username</label>
+    <input type="text" id="username" name="username" required/>
+    <label for="email">email</label>
+    <input type="email" id="email" autofocus/>
+    <label for="phone">phone number</label>
+    <input type="number" id="phone" max="1000000" min="23" step="10"/>
+    <label for="license">license plate</label>
+    <input type="text" pattern="[A-Z]{3}-[0-9]{3}" id="license" placeholder="ABC-123"/>
+    <label for="gasoline">gasoline</label>
+    <input type="radio" name="fuel" id="gasoline" value="gasoline" checked/>
+    <label for="diesel">diesel</label>
+    <input type="radio" name="fuel" id="diesel" value="diesel"/>
+    <label for="bluetooth">bluetooth</label>
+    <input type="checkbox" name="extras" id="bluetooth" value="bluetooth"/>
+    <label for="AC">AC❄️</label>
+    <input type="checkbox" name="extras" id="AC" value="AC"/>
+    <label for="airbags">airbags</label>
+    <input type="checkbox" name="extras" id="airbags" value="airbags"/>
+    <input type="text" name="extras"/>
+    <textarea name="description" rows="20" cols="2" maxlength="100">please enter a short description here</textarea>
+    <input type="submit" value="SEND!"/>
+  </form>
+  <script src="./main.js"></script>
+</body>
+</html>
