@@ -1,24 +1,56 @@
     body {
         margin: 0;
-        background-color: white;
+        background-color: grey;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
         display: flex;
-        font-family: Arial, Helvetica, sans-serif;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        align-content: flex-start;
+        align-content: stretch;
     }
 
-    form>* {
+    label {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        font-size: medium;
+        display: flex;
         flex-direction: column;
-       
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     }
 
-    input:focus {
-        border: green;
+    h1 {
+        font-size: large;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
 
     input {
-        background-color: white;
+        width: 100px;
+        height: 15px;
+        padding: 5px;
+        border: 3px;
+        border-style: solid;
+        border-color: grey;
+    }
+
+    input:focus {
+        width: 100px;
+        height: 15px;
+        padding: 5px;
+        border: 3px;
+        border-style: solid;
+        border-color: green;
+    }
+
+    #button {
+        height: 30px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     }
