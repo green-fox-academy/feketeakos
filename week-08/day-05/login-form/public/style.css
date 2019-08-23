@@ -26,6 +26,7 @@
         justify-content: center;
         align-items: flex-start;
         align-content: center;
+        background-image: image-url('password.svg')
     }
 
     h1 {
