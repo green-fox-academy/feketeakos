@@ -13,14 +13,16 @@
     <form action="/send" method="POST">
       <label for="username">USERNAME</label>
       <input type="text" id="username" name="username" placeholder="username" autofocus required />
-      <label for="password">PASSWORD</label> 
+      <label for="password">PASSWORD</label>
       <input type="password" onmousedown="this.type='text'" onmouseup="this.type='password'"
-        onmousemove="this.type='password'" id="password" placeholder="password"  required />
+        onmousemove="this.type='password'" id="password" placeholder="password" required />
       <h6>Forgot password?</h6>
       <input type="button" id="button" value="Login" />
-      <script>
-      let loginButton = document.getElementById('button');
-      let forgotButton = document.getElementsByTagName('h6')[0];
+    </form>
+    
+    <script>
+        let loginButton = document.getElementById('button');
+        let forgotButton = document.getElementsByTagName('h6')[0];
         function loginPressed() {
           console.log('You have pressed the login button.');
         }
@@ -29,10 +31,9 @@
         function forgotPressed() {
           console.log(`Isn't it your birthday date?`)
         }
-        forgotButton.addEventListener('click', forgotButton);
+        forgotButton.addEventListener('click', forgotPressed);
 
       </script>
-    </form>
   </div>
 </body>
 
