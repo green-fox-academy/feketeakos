@@ -1,0 +1,20 @@
+.button {
+    border: none;
+    background-color: grey;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.button:hover {
+    background: sandybrown;
+}
+
+p {
+    bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
