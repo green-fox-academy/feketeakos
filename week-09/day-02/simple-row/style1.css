@@ -1,0 +1,32 @@
+.container {
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 300px;
+    background-color: purple;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    height: 300px;
+    padding: 5px;
+    line-height: 290px;
+}
+
+.center {
+    order: 2;
+    background-color: greenyellow;
+    margin: 5px 5px 5px 10px;
+}
+
+.left {
+    order: 1;
+    background-color: yellow;
+    margin: 5px 5px 5px 10px;
+}
+
+.right {
+    order: 3;
+    background-color: yellow;
+    margin: 5px 5px 5px 10px;
+}
