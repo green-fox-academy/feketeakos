@@ -1,0 +1,59 @@
+body {
+    background-color: #2F3060;
+    height: 100vh;
+}
+
+table {
+    margin-top: 100px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+button {
+    margin: 30px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 100px;
+    height: 60px;
+    padding: 10px 30px 10px 30px;
+    border-color: #28292B;
+    border-radius: 10px;
+}
+
+button:hover {
+    box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 1), inset 5px 5px 5px 0px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
+    transition: all 1s;
+}
+
+#button1 {
+    background: linear-gradient(#3D5A94 2%, #28292B);
+    font: white;
+}
+
+#button2 {
+    background: linear-gradient( #1AA75D 2%, #28292B);
+    font: white;
+}
+
+#button3 {
+    background: linear-gradient( #CF4030 2%, #28292B);
+    font: white;
+}
+
+#button4 {
+    background: linear-gradient(#06A8F6 2%, #28292B);
+    font: white;
+}
+
+#button5 {
+    background: linear-gradient( #28292B , #E4E9F5 98%);
+    color: white;
+}
+
+#button6 {
+    background: linear-gradient( #E4E9F5 2%, #28292B);
+    font: black;
+}

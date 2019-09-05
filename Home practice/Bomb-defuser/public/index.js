@@ -38,7 +38,7 @@ function defuse() {
     img.src = 'https://media.giphy.com/media/4UEyopJPeJEze/giphy.gif';
     img.height = 200;
     img.width = 300;
-    bomb.replaceChild(img);
+    bomb.replaceChild(img, img);
     timer = 11;
 }
 
