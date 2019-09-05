@@ -1,0 +1,54 @@
+body {
+    background: url('https://i2.wp.com/welovebudapest.com/wp-content/uploads/sites/1/2015/01/705d28ae50ffbaa7cf7e1335687e5f25.jpg?resize=1920%2C400&ssl=1'), center, center;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+}
+
+header {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    letter-spacing: 20px;
+    margin-top: 6%;
+    font: 75px/75px Monoton, cursive;
+    text-transform: uppercase;
+    text-shadow: 0 0 80px grey, 0 0 30px goldenrod, 0 0 6px grey;
+    color: whitesmoke;
+}
+
+main {
+    display: grid;
+    grid-gap: 10px;
+    background: black;
+    height: 55vh;
+    margin-top: 8%;
+    grid-template-columns: 2fr 1fr;
+    font-family: Lato;
+    color: whitesmoke;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+posts {
+    display: grid;
+    background: linear-gradient(black 10%, grey);
+}
+
+nav {
+    background: linear-gradient(black 10%, grey);
+    border: 2px;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+button {
+    background: grey
+}
