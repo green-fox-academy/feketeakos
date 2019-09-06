@@ -10,7 +10,7 @@ header {
     align-content: center;
     justify-content: center;
     letter-spacing: 30px;
-    margin-top: 6%;
+    margin-top: 70px;
     font-size: 85px;
     font-family: Copperplate, Copperplate Gothic Light;
     text-transform: uppercase;
@@ -19,8 +19,9 @@ header {
 }
 
 main {
+    margin: auto;
     display: grid;
-    grid-gap: 7px;
+    grid-gap: 15px;
     background: black;
     height: 55vh;
     margin-top: 7%;
@@ -37,28 +38,32 @@ main {
 posts {
     display: grid;
     background: -webkit-linear-gradient(top, rgba(13, 13, 13, 1) 1%, rgba(13, 13, 13, 1) 4%, rgba(118, 90, 18, 1) 100%);
+    border-radius: 20px;
+    padding: 5%;
 }
 
 nav {
     text-align: center;
     vertical-align: middle;
     background: -webkit-linear-gradient(top, rgba(13, 13, 13, 1) 1%, rgba(13, 13, 13, 1) 4%, rgba(118, 90, 18, 1) 100%);
-    border: 2px;
     font-family: Lato;
-    font-size: 18px;
+    font-size: 22px;
     font-style: normal;
     font-variant: normal;
     line-height: 30px;
+    border-radius: 20px;
+    padding: 5%;
+    
 }
 
-button {
+.submit {
     background: black;
     font-family: Lato;
     color: rgba(118, 90, 18, 1);
     margin-top: 20%;
     height: 30px;
     width: 200px;
-    font-size: 15px;
+    font-size: 18px;
     border: 1px solid grey;
     border-radius: 50px;
     transition: box-shadow 0.2s ease-in-out;
