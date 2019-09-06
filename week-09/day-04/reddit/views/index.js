@@ -11,11 +11,13 @@ fetch(URL)
 
 function render(data) {
   for (let i = 0; i < data.posts.length; i++) {
+    let tehen = document.createElement('div');
+    document.querySelector('posts').appendChild(tehen)
     let kutya = document.createElement('h1');
     kutya.innerHTML = data.posts[i].title;
-    document.querySelector('posts').appendChild(kutya);
-    let macska = document.createElement('h1');
+    tehen.appendChild(kutya);
+    let macska = document.createElement('h2');
     macska.innerHTML = data.posts[i].url;
-    document.querySelector('posts').appendChild(macska);
+    tehen.appendChild(macska);
   }
 }
