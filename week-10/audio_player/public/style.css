@@ -1,0 +1,90 @@
+body {
+    margin: auto;
+    background-image: url('./background.png');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center center;
+    color: whitesmoke;
+    width: 80%;
+    padding: 5px;
+    border-radius: 30px;
+    align-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logo album now-playing now-playing" "playlists playlists tracks tracks" "playlists playlists tracks tracks" "control_panel control_panel control_panel control_panel";
+}
+
+.logo {
+    background-color: black;
+    grid-area: logo;
+    margin: auto;
+}
+
+.album {
+    margin: auto;
+    grid-area: album;
+
+    
+}
+
+.now-playing {
+    grid-area: now-playing;
+    border-left: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.tracks {
+    display: grid;
+    border-left: 1px solid whitesmoke;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "track_no\. track_title track_length" "track_no\. track_title track_length";
+    grid-area: tracks;
+}
+
+.track_no\. {
+    border-left: 1px solid whitesmoke;
+    grid-area: track_no\.;
+}
+
+.track_title {
+    grid-area: track_title;
+}
+
+.track_length {
+    grid-area: track_length;
+}
+
+.control_panel {
+    grid-area: control_panel;
+    border-top: whitesmoke;
+}
+
+.playlists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "title title title" "track_name track_name add_remove";
+    grid-area: playlists;
+    border-bottom: 1px whitesmoke;
+}
+
+.title {
+    grid-area: title;
+    border-bottom: 1px whitesmoke;
+}
+
+.track_name {
+    border-bottom: 1px whitesmoke;
+    grid-area: track_name;
+}
+
+.add_remove {
+    border-bottom: 1px whitesmoke;
+    grid-area: add_remove;
+}
