@@ -5,49 +5,63 @@ body {
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center center;
-    color: whitesmoke;
+  
     width: 80%;
     padding: 5px;
-    border-radius: 30px;
+
     align-content: center;
 }
 
 .grid-container {
+    font-family: 'Enriqueta', arial, serif; line-height: 1.25;
+    font-size: 18px;
+    background-color: gray;
+    opacity: 0.9;
+    border-radius: 40px;
     display: grid;
+    height: 80vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: "logo album now-playing now-playing" "playlists playlists tracks tracks" "playlists playlists tracks tracks" "control_panel control_panel control_panel control_panel";
 }
 
 .logo {
-    background-color: black;
+    background-image: url('./multimedia.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+   
+    background-size: 150px;
+
     grid-area: logo;
-    margin: auto;
+
 }
 
 .album {
-    margin: auto;
+    background-image: url('./placeholder.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    grid-area: logo;
+    background-size: 100px;
     grid-area: album;
-
-    
 }
 
 .now-playing {
+  
     grid-area: now-playing;
     border-left: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
 }
 
 .tracks {
     display: grid;
     border-left: 1px solid whitesmoke;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 50px, 400px 100px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "track_no\. track_title track_length" "track_no\. track_title track_length";
     grid-area: tracks;
 }
 
 .track_no\. {
+    column-width: 50px;
     border-left: 1px solid whitesmoke;
     grid-area: track_no\.;
 }
@@ -60,7 +74,10 @@ body {
     grid-area: track_length;
 }
 
-.control_panel {
+audio {
+    position: absolute;
+    width: 80%;
+    bottom: 5%;
     grid-area: control_panel;
     border-top: whitesmoke;
 }
