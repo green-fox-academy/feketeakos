@@ -5,15 +5,14 @@ body {
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center center;
-  
     width: 80%;
     padding: 5px;
-
     align-content: center;
 }
 
 .grid-container {
-    font-family: 'Enriqueta', arial, serif; line-height: 1.25;
+    font-family: 'Enriqueta', arial, serif;
+    line-height: 1.25;
     font-size: 18px;
     background-color: gray;
     opacity: 0.9;
@@ -29,11 +28,8 @@ body {
     background-image: url('./multimedia.svg');
     background-repeat: no-repeat;
     background-position: center center;
-   
     background-size: 150px;
-
     grid-area: logo;
-
 }
 
 .album {
@@ -46,24 +42,20 @@ body {
 }
 
 .now-playing {
-  
     grid-area: now-playing;
-    border-left: 1px solid whitesmoke;
 }
 
 .tracks {
     display: grid;
-    border-left: 1px solid whitesmoke;
     grid-template-columns: 50px, 400px 100px;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "track_no\. track_title track_length" "track_no\. track_title track_length";
+    grid-template-areas: "track_no track_title track_length" "track_no track_title track_length";
     grid-area: tracks;
 }
 
-.track_no\. {
+.track_no {
     column-width: 50px;
-    border-left: 1px solid whitesmoke;
-    grid-area: track_no\.;
+    grid-area: track_no;
 }
 
 .track_title {
@@ -79,7 +71,6 @@ audio {
     width: 80%;
     bottom: 5%;
     grid-area: control_panel;
-    border-top: whitesmoke;
 }
 
 .playlists {
@@ -88,20 +79,16 @@ audio {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "title title title" "track_name track_name add_remove";
     grid-area: playlists;
-    border-bottom: 1px whitesmoke;
 }
 
 .title {
     grid-area: title;
-    border-bottom: 1px whitesmoke;
 }
 
 .track_name {
-    border-bottom: 1px whitesmoke;
     grid-area: track_name;
 }
 
 .add_remove {
-    border-bottom: 1px whitesmoke;
     grid-area: add_remove;
 }
