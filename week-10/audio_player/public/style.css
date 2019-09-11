@@ -75,20 +75,52 @@ audio {
 
 .playlists {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "title title title" "track_name track_name add_remove";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "title" "playlist_name";
     grid-area: playlists;
+    margin: 5px;
 }
 
 .title {
+    display: inline-block;
+    background-color: #CCC;
+    opacity: 0.6;
     grid-area: title;
+    height: 50px;
 }
 
-.track_name {
-    grid-area: track_name;
+p {
+    overflow: auto;
+    margin: auto;
+    font-size: 16px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
 }
 
-.add_remove {
-    grid-area: add_remove;
+.playlist_name>p:nth-child(even) {
+    grid-area: playlist_name;
+    background-color: #CCC;
+    opacity: 0.6;
+}
+
+.playlist_name>p:nth-child(odd) {
+    grid-area: playlist_name;
+    background-color: #FFF;
+    opacity: 0.6;
+}
+
+button {
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background-color: grey;
+    font-size: 12px;
+}
+
+button:hover {
+    background-color: teal;
+    color: black;
 }
