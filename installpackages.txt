@@ -1,0 +1,11 @@
+1. npm init
+
+2. npm install express ejs -P
+
+3. npm install nodemon -D
+
+4. package.json ->scripts->  "start:dev":"nodemon server.js",
+
+5. npm install mysql
+
+6. npm run start:dev
